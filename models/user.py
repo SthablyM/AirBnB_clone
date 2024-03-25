@@ -3,10 +3,10 @@
 from models.base_model import BaseModel
 
 
- class User(BaseModel):
-     """Class user that will handle user's information"""
+class User(BaseModel):
+    """Class user that will handle user's information"""
 
-     email = ""
-     password = ""
-     first_name = ""
-     last_name = ""
+    email = ""
+    password = ""
+    first_name = ""
+    last_name = ""

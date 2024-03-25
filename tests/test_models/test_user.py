@@ -25,12 +25,6 @@ class Test_User_Instatiation(unittest.TestCase):
     def test_name(self):
         self.assertEqual(str, type(User.email))
 
-    def test_name(self):
-        self.assertEqual(str, type(User.name))
-
-    def test_surname(self):
-        self.assrtEqual(str, type(User.surname))
-
 
 if __name__ == "__main__":
     unittest.main()

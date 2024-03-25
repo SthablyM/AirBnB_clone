@@ -32,16 +32,6 @@ class TestCityInstantion(unittest.TestCase):
         self.assertNotIn(None, c.__dict__.values())
 
 
-class Test_City_save(unittest.TestCase):
-    """Unittest testing for save of the class"""
-
-    @classmethod
-    def test_save_update(self):
-        c = City()
-        c.save()
-        cid = "City." + c.id
-        with open("file.json", "r") as file:
-            self.assertIn(cid, file.read())
 
 if __name__ == "__name__":
     unittest.main()

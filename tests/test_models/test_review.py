@@ -21,12 +21,6 @@ class TestReviewInstantion(unittest.TestCase):
     def test_updated_at(self):
         self.assertEqual(datetime, type(Review().updated_at))
 
-    def test_name(self):
-        rev = Review()
-        self.assertEqual(str, type(Review.name))
-        self.assertIn("name", dir(rev))
-        self.assertNotIn("name", rev.__dict__)
-    
     def test_arg_unused(self):
         rev = Review(None)
         self.assertNotIn(None, rev.__dict__.values())
@@ -35,19 +29,6 @@ class TestReviewInstantion(unittest.TestCase):
         rev1 = Review()
         rev2 = Review()
         self.assertNotEqual(rev1, rev2.id)
-
-class TestReview_to_dict(unittest.TestCase):
-    """Unittest for testing to_dict method of the city"""
-
-    def test_to_dict(self):
-        self.assertTrue(dict, type(Review().to_dict()))
-
-    def test_to_dict_datetime(self):
-        rev = City()
-        rev.name = "Holberton"
-        rev.number = 98
-        self.assertEqual("Holberton", rev.name)
-        self.assertIn("my_number", rev.to_dict)
 
     
 
